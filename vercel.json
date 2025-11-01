@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/MoneyLedger.jsx"
+    }
+  ],
+  "builds": [
+    {
+      "src": "MoneyLedger.jsx",
+      "use": "@vercel/static-build"
+    }
+  ]
+}
