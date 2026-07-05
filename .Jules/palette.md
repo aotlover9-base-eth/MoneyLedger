@@ -1,0 +1,3 @@
+## 2024-07-05 - Add ARIA Labels and Focus States to Icon Buttons
+**Learning:** Icon-only buttons (like delete buttons in data tables) often lack descriptive context for screen reader users and missing visual focus indicators for keyboard navigation. Using dynamic ARIA labels (e.g., `aria-label="Delete Savings entry"`) provides specific context, while `focus-visible` ensures keyboard users see where they are without impacting mouse click aesthetics.
+**Action:** Always verify icon-only buttons have an `aria-label` describing the specific action/item, an `aria-hidden="true"` on the SVG itself to reduce noise, and explicit `focus-visible` styles for keyboard navigation.
