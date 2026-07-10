@@ -1,0 +1,3 @@
+## 2024-03-20 - Context-Aware Destructive Actions in Dynamic Lists
+**Learning:** In dynamic lists (like ledger tables), isolated destructive actions (e.g., an icon-only delete button) cause cognitive overhead and high risk of error because users lose context of *what* they are deleting. This is heavily compounded for screen reader users who only hear "Delete Entry" repeatedly for every row.
+**Action:** Always provide row-specific context to destructive actions. Use `aria-label` or `title` containing the item's name (e.g., "Delete Savings entry"). For irreversible actions, pair this with a contextual confirmation dialog so the user actively verifies the specific item they intend to destroy.
