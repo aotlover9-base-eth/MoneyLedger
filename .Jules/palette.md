@@ -1,0 +1,4 @@
+## 2024-05-18 - Added Accessibility attributes and focus-visible on Icon Buttons
+
+**Learning:** When using Tailwind with React for interactive elements like icon-only buttons (`<button><svg /></button>`), standard keyboard navigation doesn't provide enough visual feedback, and screen readers read 'button' without context.
+**Action:** Always add `aria-label` dynamically based on the list item's content, add `aria-hidden="true"` to the inner SVG, and use Tailwind's `focus-visible:` utilities (`focus-visible:ring-2`, `focus-visible:outline-none`) to provide clear visual feedback only when navigating via keyboard.
