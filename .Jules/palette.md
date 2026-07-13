@@ -1,0 +1,3 @@
+## 2024-05-18 - Improved Destructive Action Confirmations & Accessibility
+**Learning:** Found an accessibility issue pattern specific to this app's components: Icon-only buttons for destructive actions like deleting entries lack keyboard focus indicators, screen reader descriptions (`aria-label`), and accidentally clicking them results in immediate, unrecoverable data loss.
+**Action:** Always wrap destructive actions in a confirmation dialog (e.g. `window.confirm`) and ensure icon-only buttons have proper `aria-label`, hide the inner svg from screen readers using `aria-hidden="true"`, and apply `focus-visible` styling for keyboard users.
