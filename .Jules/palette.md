@@ -1,0 +1,3 @@
+## 2024-05-17 - Missing Focus States on Interactive Elements
+**Learning:** Found a pattern where interactive elements (buttons) in the application lacked clear focus indicators, which is an accessibility issue for keyboard navigation. Additionally, an icon-only button was missing an ARIA label.
+**Action:** Applied Tailwind CSS utility classes `focus:outline-none`, `focus-visible:ring-2`, and `focus-visible:ring-offset-2` to buttons, using a ring color matching the button's background to improve focus visibility. Added `aria-label` to the delete button and `aria-hidden="true"` to its internal SVG to hide it from screen readers.
