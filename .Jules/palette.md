@@ -1,0 +1,3 @@
+## 2024-07-24 - Interactive Element Accessibility and Safety
+**Learning:** Destructive actions (like Firebase deletes) must be wrapped in a confirmation dialog (e.g., `window.confirm()`) to prevent accidental data loss. Furthermore, all custom interactive buttons require explicit focus outlines (using utilities like `focus-visible:ring-2` and offset/color classes) to support proper keyboard accessibility, as default focus rings are often insufficient or styled out.
+**Action:** Always add a confirmation step for destructive operations and verify that all interactive elements, particularly buttons, have explicitly defined `focus-visible` styles to ensure keyboard navigation visibility.
