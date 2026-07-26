@@ -1,0 +1,3 @@
+## 2024-05-24 - Require Confirmation for Destructive Actions & Label Icon-Only Buttons
+**Learning:** Found that deleting ledger entries happens immediately without any prompt, leading to potential accidental data loss. Furthermore, the delete button only contained an SVG icon, making it inaccessible to screen reader users and lacking clear focus indicators for keyboard navigation.
+**Action:** Always wrap destructive actions like Firebase document deletion in a `window.confirm()` or equivalent dialog. Ensure all icon-only buttons include an `aria-label` attribute and visible focus states (e.g., using `focus-visible:ring-2`) to support accessibility.
