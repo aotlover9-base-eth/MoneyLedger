@@ -1,0 +1,3 @@
+## 2024-03-24 - Interactive Elements Keyboard Focus & Destructive Action Confirmations
+**Learning:** Destructive actions connected to external services (like Firebase deletions) need explicit user confirmation to prevent accidental data loss. Furthermore, custom interactive buttons in Tailwind must have explicit focus states (e.g., focus-visible:ring-2 and appropriate offsets/colors) and icon-only buttons need aria-labels to maintain proper accessibility.
+**Action:** Always wrap destructive actions in a window.confirm() dialog. Ensure all custom buttons receive explicit focus-visible classes for keyboard a11y, and add aria-labels to icon-only buttons.
