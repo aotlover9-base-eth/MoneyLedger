@@ -1,0 +1,3 @@
+## 2024-07-31 - Local Testing Prompt A11y Verification
+**Learning:** When adding UI confirmation dialogs (like `window.confirm()`) to destructive actions in this app, placing the confirmation prompt *before* any early returns that check for authentication (e.g., `if (!userId || !db) return;`) ensures the prompt and associated focus/click states can be tested locally using mock data even when unauthenticated.
+**Action:** Always insert `window.confirm()` logic before authorization/database checks in frontend handlers when implementing destructive action warnings to allow for local UX testing.
