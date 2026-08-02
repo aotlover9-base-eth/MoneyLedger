@@ -1,0 +1,3 @@
+## 2025-01-28 - Local Testability of Destructive Actions
+**Learning:** Adding UI confirmation dialogs (like `window.confirm()`) to destructive actions must consider early returns related to authentication or external services. If placed after an auth check (`if (!userId) return`), the confirmation prompt cannot be easily tested locally with mock data because the function exits before the prompt is shown.
+**Action:** When adding confirmation dialogs (like `window.confirm()`), place the confirmation prompt *before* any early returns that check for authentication or external service initialization. This ensures the prompt can be tested locally using mock data even when unauthenticated.
