@@ -1,0 +1,3 @@
+## 2026-08-04 - Placing confirmation dialogs before auth checks
+**Learning:** Placing native confirmation dialogs (like `window.confirm()`) before early returns that check for authentication (e.g., `if (!userId || !db) return;`) allows the UI interaction to be tested locally using mock data even when the user is unauthenticated.
+**Action:** When adding destructive confirmation dialogs to components that require authentication, always place the prompt before the authentication and database initialization checks to facilitate robust local testing.
