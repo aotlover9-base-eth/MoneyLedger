@@ -1,0 +1,3 @@
+## 2024-05-18 - Auth Checks and Confirmation Dialogs
+**Learning:** When adding UI confirmation dialogs (like `window.confirm()`) to destructive actions in this app, placing the confirmation prompt *after* early returns that check for authentication (e.g., `if (!userId || !db) return;`) makes it impossible to locally test the UI interaction using mock data, because the unauthenticated state silently swallows the click event.
+**Action:** Always place user-facing confirmation dialogs or other purely UI-driven logic *before* any backend or authentication early returns to ensure the UI can be fully verified in local, unauthenticated environments.
