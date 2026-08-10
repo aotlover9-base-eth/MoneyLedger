@@ -1,0 +1,3 @@
+## 2024-08-10 - Confirmation Dialog Placement for Destructive Actions
+**Learning:** In applications with early-return authentication checks (e.g., `if (!userId) return;`), placing native confirmation dialogs (like `window.confirm()`) *after* the auth check makes it impossible to locally test or preview the UI interaction without a fully mocked or functional auth backend, leading to a degraded local development experience.
+**Action:** Always place user-facing confirmation dialogs or prompt logic for destructive actions *before* any backend or auth-related early returns. This ensures the UX flow can be validated independently of the backend state.
