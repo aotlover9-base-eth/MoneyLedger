@@ -1,0 +1,3 @@
+## 2026-08-14 - Destructive Action Protection & A11y
+**Learning:** Icon-only destructive actions without native browser confirmations can lead to accidental data loss and present accessibility barriers if they lack screen reader labels and keyboard focus outlines.
+**Action:** Always wrap delete actions in a `window.confirm()` dialog (ensuring it precedes any early returns like auth checks) and ensure icon-only buttons have proper `aria-label` attributes and `focus-visible:ring-2` styles.
