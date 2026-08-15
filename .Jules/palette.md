@@ -1,0 +1,3 @@
+## 2026-08-15 - Window confirm dialog blocking
+**Learning:** Native `window.confirm` dialogs in browser APIs block execution thread. Testing them requires setting up event handlers to capture and respond to the dialog event before the action triggering the dialog is performed, else automated tests (like playwright) hang.
+**Action:** Always setup `page.on("dialog")` handler before triggering interactions that result in native alert or confirm dialogs being spawned in UI testing.
