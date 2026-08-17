@@ -1,0 +1,3 @@
+## 2026-08-17 - Confirmation Dialog Pre-Auth Execution
+**Learning:** When adding native UI dialogs (like `window.confirm`) for destructive actions on elements that rely on backend data (like Firebase deletes), the confirmation check must be placed before any early return checks for authentication or database readiness (`if (!userId || !db) return;`). If placed after, unauthenticated users or local mock tests will fail silently without ever triggering the dialog, breaking the ability to verify the UX.
+**Action:** Always structure destructive action handlers so that user-facing confirmation prompts execute prior to internal state/auth validation checks, allowing for robust local UX testing and predictable behavior regardless of auth state.
