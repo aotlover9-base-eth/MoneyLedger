@@ -1,0 +1,3 @@
+## 2024-11-20 - Ensure destructive actions can be tested unauthenticated
+**Learning:** When adding native UI confirmation dialogs (like `window.confirm()`) to destructive actions in this app, placing the prompt before any early returns that check for authentication prevents testing using mock data locally.
+**Action:** Always place `window.confirm()` or equivalent dialogs before early returns that check for `userId` or `db` initialization. This ensures the prompt can be tested locally using mock data even when the user is unauthenticated.
