@@ -1,0 +1,3 @@
+## 2024-05-24 - Delete Button Confirmation
+**Learning:** Destructive actions like deletions need a confirmation dialog (`window.confirm()`) *before* early returns for authentication checks (`if (!userId || !db) return;`). If placed after, local UI testing without functional Firebase auth cannot trigger or verify the confirmation dialog.
+**Action:** Always place user interaction blockers and prompts at the very beginning of action handlers before backend dependencies are validated, ensuring the UI flow remains testable independently of the backend state.
