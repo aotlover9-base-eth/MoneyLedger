@@ -1,0 +1,3 @@
+## 2024-05-20 - Testing destructive actions without auth
+**Learning:** When adding UI confirmation dialogs (`window.confirm()`) to destructive actions in an app relying on external auth (like Firebase), placing the confirmation prompt before early returns that check for authentication allows the prompt to be tested locally using mock data even when unauthenticated.
+**Action:** Always wrap destructive actions in a confirmation dialog and place the prompt before any authentication or database connection checks to facilitate local testing and ensure the UI logic works independently of backend state.
