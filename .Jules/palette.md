@@ -1,0 +1,3 @@
+## 2026-08-22 - Adding Confirmation Prompts and Auth Checks
+**Learning:** When adding UI confirmation dialogs (like `window.confirm()`) to destructive actions in this app, place the confirmation prompt before any early returns that check for authentication (e.g., `if (!userId || !db) return;`). This ensures the prompt can be tested locally using mock data even when unauthenticated, as the auth failures won't prematurely skip the prompt logic.
+**Action:** Always insert confirmation logic prior to early auth termination checks when testing components that depend on Firebase user sessions locally.
