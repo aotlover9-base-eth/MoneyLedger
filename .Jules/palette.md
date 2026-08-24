@@ -1,0 +1,3 @@
+## 2026-08-24 - Placement of UI Confirmation Dialogs
+**Learning:** Destructive actions tied to backend operations often have early returns for authentication checks. Placing native UI prompts (like `window.confirm()`) *after* these checks prevents unauthenticated testing of the UI component, hiding potential interaction bugs.
+**Action:** Always place user-facing confirmation dialogs or warnings *before* any backend dependency or authentication checks in the handler function to ensure the UX can be fully tested regardless of connection state.
