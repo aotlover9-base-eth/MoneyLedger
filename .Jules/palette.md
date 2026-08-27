@@ -1,0 +1,3 @@
+## 2024-10-24 - Testable Confirmation Dialogs
+**Learning:** When adding destructive action confirmation dialogs (e.g., `window.confirm()`) to components that require authentication, placing the prompt after the authentication check makes it impossible to test the dialog visually and interactively using mock data during unauthenticated local development.
+**Action:** Always place confirmation dialogs before any early returns that check for authentication (like `if (!userId) return;`), ensuring the interaction can be fully tested regardless of auth state.
