@@ -1,0 +1,3 @@
+## 2024-05-24 - Delete Confirmation & Icon Accessibility
+**Learning:** Destructive actions in this app (like deleting ledger entries) require explicit user confirmation to prevent accidental data loss. Furthermore, icon-only buttons need proper ARIA labels and focus states to ensure keyboard and screen reader accessibility, as well as `aria-hidden="true"` on purely decorative elements.
+**Action:** Always wrap destructive actions in `window.confirm()` and ensure icon-only buttons have an `aria-label`, visible focus states (`focus-visible:ring`), and decorative SVGs are hidden from screen readers.
