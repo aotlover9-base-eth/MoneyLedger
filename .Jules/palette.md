@@ -1,0 +1,3 @@
+## 2026-09-09 - Accessible Destructive Actions
+**Learning:** Found that the destructive "Delete" button lacked a confirmation prompt and key accessibility attributes (aria-label for the icon-only button, aria-hidden for the inner SVG), making it unsafe and difficult for screen reader users to navigate. Additionally, it lacked clear focus styles for keyboard users.
+**Action:** Always wrap destructive actions in a `window.confirm()` dialog *before* early returns (like auth checks) so they can be tested effectively. Ensure all icon-only buttons include an `aria-label`, hide decorative SVGs with `aria-hidden="true"`, and apply clear focus states (`focus-visible:ring-2`) to support keyboard navigation.
